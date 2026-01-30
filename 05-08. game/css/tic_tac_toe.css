@@ -1,0 +1,245 @@
+@charset "utf-8";
+
+html {
+    font-size: 16px;;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    line-height: normal;
+    font-family: "Helvetica Neue",
+    Arial, 
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    Meiryo,   
+    sans-serif;
+    background-image: url(../img/1114362.png);
+    overflow: hidden;
+}
+
+p{
+    margin: 0;
+    padding: 0;
+}
+
+/*HEADER*/
+header{
+    display: inline-block;          /* co theo chữ */
+    margin: 14px auto 0;
+    padding: 10px 28px;             /* độ dày khung */
+    border-radius: 14px;
+  
+    color: #ffe066;                 /* vàng dịu hợp nền */
+    font-size: 44px;
+    font-weight: 800;
+    letter-spacing: 2px;
+  
+    background: rgba(20, 20, 20, 0.55); /* hơi trong */
+    border: 2px solid rgba(255, 224, 102, 0.55);
+    text-shadow: 0 2px 0 rgba(0,0,0,0.45);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    font-family: "Cinzel", serif;
+
+  }
+  
+ 
+  
+/* GAME */
+.wrapper {
+    position: relative;
+    max-width: 100vw;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 23px;
+    text-align: center;
+}
+
+/* GAME AREA */
+.game-container {
+    padding: 40px 0;
+}
+
+/* class=message-container */
+.message-container {
+    margin-bottom: 20px;
+    font-size: 2em;
+    font-weight: bold;
+    overflow: hidden;
+}
+
+.js-hidden {
+    display: none;
+}
+
+/* class=squares-container */
+.squares-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 200px;
+}
+
+.squares-box {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    border: solid 2px #333;
+}
+
+.square {
+    position: relative;
+    width: calc(196px / 3);
+    height: calc(196px / 3);
+    border: solid 3px #333;
+}
+
+/* CAT */
+.js-cat-checked::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 61px;
+    height: 61px;
+    content: '';
+    background-image: url(../img/cat.jpg);
+    background-size: contain;
+}
+
+/* DOG */
+.js-dog-checked::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 61px;
+    height: 61px;
+    content: '';
+    background-image: url(../img/dog.jpg);
+    background-size: contain;
+}
+
+/* non-protect */
+.js-clickable {
+    content: '';
+}
+
+/* protect */
+.js-unclickable {
+    pointer-events: none;
+}
+
+/* winner-line high-light */
+.js-cat_highLight {
+    outline: 3px solid rgb(173, 216, 230);
+    outline-offset: -3px;
+  }
+  .js-dog_highLight {
+    outline: 3px solid rgb(255, 215, 100);
+    outline-offset: -3px;
+  }
+  
+
+/* New Game */
+.btn-container {
+    padding-top: 40px;
+}
+
+/* NEW GAME BUTTON */
+.btn{
+    display: inline-block;
+    margin-top: 26px;
+    padding: 12px 34px;
+    border-radius: 16px;
+  
+    font-family: "Cinzel", serif;
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+  
+    color: #ffe066;
+    background: rgba(20, 20, 20, 0.6);
+    border: 2px solid rgba(255, 224, 102, 0.55);
+  
+    cursor: pointer;
+    user-select: none;
+  
+    box-shadow: 0 10px 26px rgba(0,0,0,0.35);
+    transition: all 0.3s ease;
+  }
+
+  .btn:hover{
+    background: rgba(20, 20, 20, 0.8);
+    box-shadow: 0 0 18px rgba(255, 224, 102, 0.7);
+    transform: translateY(-2px) scale(1.02);
+  }
+  
+
+/* BACK */
+.back{
+    position: absolute;
+    top: 14px;
+    left: 16px;
+    z-index: 10000;
+    
+    display: inline-block;
+    padding: 8px 18px;
+    border-radius: 12px;
+  
+    font-family: "Cinzel", serif;   /* cùng font header */
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1px;
+  
+    color: #ffe066;                 /* vàng cổ */
+    background: rgba(20, 20, 20, 0.55);
+    border: 2px solid rgba(255, 224, 102, 0.55);
+  
+    cursor: pointer;
+    user-select: none;
+  
+    box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+    transition: all 0.25s ease;
+  }
+  
+
+.back:hover{
+    background: rgba(20, 20, 20, 0.75);
+    box-shadow: 0 0 12px rgba(255, 224, 102, 0.6);
+    transform: translateY(-1px);
+}
+  
+/* FOOTER */
+footer> p {
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+    margin: 0px;
+    padding: 1px;
+    color: whitesmoke;
+    font: 16px Rajdhani;
+    text-align: center;
+    background: rgba(1, 24, 31, 0.7);
+}
+
+/* MOBILE */
+@media screen and (max-width: 480px) {
+    .wrapper {
+        padding-bottom: 23px;
+    }
+    .btn-container {
+        padding-top: 2px;
+    }
+    /* header */
+    header {
+        font-size: 24px;
+    }
+    /* message */
+    #msgtext {
+        font-size: 20px;
+    }
+}
