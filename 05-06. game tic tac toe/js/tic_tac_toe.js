@@ -49,7 +49,7 @@ const msgtxt5 =
   '<p class="image"><img src="img/cat.jpg" width="61" height="61">' +
   '<img src="img/dog.jpg" width="61" height="61"></p>' +
   '<p class="text animate__animated animate__bounceIn">Draw!!</p>';
-let gameSound = ["sound/click_sound1.mp3","sound/click_sound2.mp3","sound/catwin_sound.mp3","sound/dogwin_sound.mp3","sound/draw_sound.mp3"];
+let gameSound = ["sound/click_sound1.mp3","sound/click_sound2.mp3","sound/catwin.mp3","sound/dogwin_sound.mp3","sound/draw_sound.mp3"];
 
 
 //************************************ */
